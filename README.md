@@ -24,8 +24,10 @@ NASCON stands for National Software Convention — a flagship event where innova
 ## Installation & Run
 
 To get up and running with the project:
+```
 git clone https://github.com/your-username/nascon-project.git
 cd nascon-project
+```
 
 2. Installing dependencies:
 
@@ -40,30 +42,35 @@ npm install
   SOURCE nascon.sql;
   ```
 
-4. Edit your `config/database.js` with your credentials:
-
+ 4. Edit your `config/database.js` with your credentials:
 ```js
+const mysql = require("mysql");
+
 const connection = mysql.createConnection({ 
-    host: "your-database-ip-or-name",
-    user: "your-username",
-    password: "your-password",
-    database: "nascon"
+  host: "your-database-ip-or-name",
+  user: "your-username",
+  password: "your-password",
+  database: "nascon"
 });
 
-5. Start the application:
-node server.js
+module.exports = connection;
+```
+5.
+    Start the application:
+  - node server.js
+
 
 6. Open your browser at:
 
-http://localhost:3000
+   - http://localhost:3000
 
-Additional Notes
+# Additional Notes
 
 This project is meant for educational purposes, demonstrating a standard stack (MySQL, Node.js, Express, HTML, CSS, JavaScript).
 
 Feel free to modify, reuse, or adapt the code for your own portfolio or practice.
 
-Contact
+# Contact
 
 If you have any questions or suggestions, feel free to reach me at:
 
